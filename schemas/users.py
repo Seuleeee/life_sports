@@ -17,3 +17,24 @@ class UsersCreateItem(BaseModel):
 
     class Config:
         orm_mode = True
+
+
+class UsersUpdateItem(BaseModel):
+    email: EmailStr | None = Field(
+        default=None, title='이메일 형식의 아이디'
+    )
+    nickname: str | None = Field(
+        min_length=2, max_length=8, description='닉네임은 2~8글자의 영문 또는 한글로 만들어주세요.'
+    )
+
+    class Config:
+        orm_mode = True
+
+
+class UsersReadItem(BaseModel):
+    email: EmailStr
+    user_id: str
+    nickname: str
+
+    class Config:
+        orm_mode = True

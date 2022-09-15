@@ -1,12 +1,16 @@
 ## 소개
  생활 속 운동을 기록하고 발전하는 모습을 확인할 수 있습니다.
 
+</br>
 
 ## 적용 기술
-<img src="https://img.shields.io/badge/FastAPI 0.81.0-009688?style=flat-square&logo=FastAPI&logoColor=white"/>
-<img src="https://img.shields.io/badge/Python 3.10.6-3776AB?style=flat-square&logo=Python&logoColor=white"/>
-<img src="https://img.shields.io/badge/MariaDB-003545?style=flat-square&logo=MariaDB&logoColor=white"/>
+<div>
+ <img src="https://img.shields.io/badge/Python 3.10.6-3776AB?style=flat-square&logo=Python&logoColor=white"/>
+ <img src="https://img.shields.io/badge/MariaDB 10.7.3-003545?style=flat-square&logo=MariaDB&logoColor=white"/>
+ <img src="https://img.shields.io/badge/FastAPI 0.81.0-009688?style=flat-square&logo=FastAPI&logoColor=white"/>
+</div>
 
+</br>
 
 ## How to use
 
@@ -37,6 +41,7 @@ pip install -r requirements.txt
 }
 ```
 
+</br>
 
 ## Structure
 

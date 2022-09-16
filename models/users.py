@@ -1,7 +1,15 @@
-from sqlalchemy import Boolean, Column, ForeignKey, Integer, String, DATETIME
-from sqlalchemy.orm import relationship
+# TODO, Base 제거
+from config.database import Base, meta
+from sqlalchemy import Column, Integer, String, Table
+from sqlalchemy.sql.sqltypes import Integer, String
 
-from config.database import Base
+
+users = Table('Users', meta,
+              Column('user_id', String, primary_key=True, index=True),
+              Column('password', String),
+              Column('email', String),
+              Column('nickname', String)
+            )
 
 
 class Users(Base):

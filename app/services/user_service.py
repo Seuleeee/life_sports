@@ -1,9 +1,7 @@
-import datetime
 from sqlalchemy.orm import Session
 
 from models.users import Users
 from schemas.users import UsersCreateItem, UsersUpdateItem
-
 
 class UserService:
     def create(self, db: Session, user: UsersCreateItem):

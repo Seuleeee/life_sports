@@ -1,8 +1,7 @@
 from fastapi import FastAPI
 
-from config.database import SessionLocal, engine, Base
-from controllers.index import users
-
+from config.database import engine, Base
+from controllers import users
 
 Base.metadata.create_all(bind=engine)
 

@@ -1,8 +1,8 @@
 from fastapi import HTTPException
 from sqlalchemy.orm import Session
 
-from schemas.users import UsersCreateItem, UsersUpdateItem
-from services.user_service import UserService
+from app.schemas.users import UsersCreateItem, UsersUpdateItem
+from app.services.user_service import UserService
 
 
 class UserBusiness:

@@ -1,4 +1,4 @@
-/app/config/secrets.json
+/backend/app/config/secrets.json
 .idea/*
 __pycache__/*
 *.pyc

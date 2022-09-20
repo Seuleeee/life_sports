@@ -1,9 +1,9 @@
 from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
 
-from schemas.users import UsersCreateItem, UsersReadItem, UsersUpdateItem
-from business.users import UserBusiness
-from config.database import get_db
+from app.schemas.users import UsersCreateItem, UsersReadItem, UsersUpdateItem
+from app.business.users import UserBusiness
+from app.config.database import get_db
 
 router = APIRouter(prefix='/users', tags=['users'])
 

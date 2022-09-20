@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 
-from config.database import engine, Base
-from controllers import users
+from app.config.database import engine, Base
+from app.controllers import users
 
 Base.metadata.create_all(bind=engine)
 

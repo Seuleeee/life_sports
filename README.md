@@ -6,8 +6,13 @@
 ## 적용 기술
 <div>
  <img src="https://img.shields.io/badge/Python 3.10.6-3776AB?style=flat-square&logo=Python&logoColor=white"/>
- <img src="https://img.shields.io/badge/MariaDB 10.7.3-003545?style=flat-square&logo=MariaDB&logoColor=white"/>
  <img src="https://img.shields.io/badge/FastAPI 0.81.0-009688?style=flat-square&logo=FastAPI&logoColor=white"/>
+</div>
+<div>
+  <img src="https://img.shields.io/badge/MariaDB 10.7.3-003545?style=flat-square&logo=MariaDB&logoColor=white"/>
+</div>
+<div>
+ <img src="https://img.shields.io/badge/Docker 20.10.17-2496ED?style=flat-square&logo=Docker&logoColor=white"/>
 </div>
 
 </br>

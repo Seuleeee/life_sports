@@ -11,10 +11,12 @@ ENV PYTHONUNBUFFERED 1
 # install system dependencies
 RUN apt-get update \
   && apt-get -y install netcat gcc \
+  && apt-get -y install default-libmysqlclient-dev \
   && apt-get clean
 
 # install python dependencies
-RUN pip install --upgrade pip
+RUN pip install --upgrade pip \
+  && pip install --upgrade setuptools
 COPY requirements.txt .
 RUN pip install -r requirements.txt
 

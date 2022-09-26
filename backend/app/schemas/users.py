@@ -1,19 +1,14 @@
+from dataclasses import dataclass
 from pydantic import BaseModel, Field, EmailStr
+from fastapi import Form
 
 
-class UsersCreateItem(BaseModel):
-    user_id: str = Field(
-        default=None, title='사용자 아이디'
-    )
-    email: EmailStr = Field(
-        default=None, title='이메일 형식의 아이디'
-    )
-    password: str = Field(
-        min_length=8, max_length=20, description='비밀번호는 8~20자의 영문, 숫자, 특수문자 조합으로 작성해주세요.'
-    )
-    nickname: str = Field(
-        min_length=2, max_length=8, description='닉네임은 2~8글자의 영문 또는 한글로 만들어주세요.'
-    )
+@dataclass
+class UsersCreateItem:
+    user_id: str = Form(min_length=10, max_length=20)
+    email: EmailStr = Form(description='이메일')
+    password: str = Form(min_length=8, max_length=20)
+    nickname: str = Form(min_length=2, max_length=10)
 
     class Config:
         orm_mode = True

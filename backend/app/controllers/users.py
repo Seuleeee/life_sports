@@ -9,7 +9,7 @@ router = APIRouter(prefix='/users', tags=['users'])
 
 
 @router.post('/')
-async def sign_up(user: UsersCreateItem, db: Session = Depends(get_db)):
+async def sign_up(user: UsersCreateItem = Depends(), db: Session = Depends(get_db)):
     return UserBusiness().create(db=db, user=user)
 
 

@@ -14,7 +14,7 @@ class UserService:
         db.add(db_user)
         db.commit()
         db.refresh(db_user)
-        return db_user
+        return db_user.user_id
 
     def read_list(self, db: Session, skip: int = 0, limit: int = 100):
         return db.query(Users).offset(skip).limit(limit).all()

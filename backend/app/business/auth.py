@@ -17,7 +17,7 @@ class AuthBusiness:
         if is_verified_password:
             return {
                 'access_token': create_access_token(user_id),
-                'refresh_token': create_access_token(user_id),
+                'refresh_token': create_refresh_token(user_id),
             }
         else:
             raise HTTPException(

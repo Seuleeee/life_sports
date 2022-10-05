@@ -9,5 +9,5 @@ router = APIRouter(prefix='/auth', tags=['auth'])
 
 
 @router.post('/login', response_model=AuthTokenSchema)
-async def login(user_id: str = Form(...), password: str = Form(), db: Session = Depends(get_db)):
-    return AuthBusiness().login(user_id=user_id, password=password, db=db)
+async def login(email: str = Form(...), password: str = Form(), db: Session = Depends(get_db)):
+    return AuthBusiness().login(email=email, password=password, db=db)

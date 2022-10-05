@@ -18,16 +18,16 @@ async def read_users(db: Session = Depends(get_db)):
     return UserBusiness().read_list(db=db)
 
 
-@router.get('/{user_id}', response_model=UsersReadItem)
-async def read_user(user_id: str, db: Session = Depends(get_db)):
-    return UserBusiness().read(db=db, user_id=user_id)
+@router.get('/{email}', response_model=UsersReadItem)
+async def read_user(email: str, db: Session = Depends(get_db)):
+    return UserBusiness().read(db=db, email=email)
 
 
-@router.put('/{user_id}')
-async def update_user(user_id: str, user: UsersUpdateItem, db: Session = Depends(get_db)):
-    return UserBusiness().update(db=db, user_id=user_id, user=user)
+@router.put('/{email}')
+async def update_user(email: str, user: UsersUpdateItem, db: Session = Depends(get_db)):
+    return UserBusiness().update(db=db, email=email, user=user)
 
 
-@router.delete('/{user_id}')
-async def delete_user(user_id: str, db: Session = Depends(get_db)):
-    return UserBusiness().delete(db=db, user_id=user_id)
+@router.delete('/{email}')
+async def delete_user(email: str, db: Session = Depends(get_db)):
+    return UserBusiness().delete(db=db, email=email)

@@ -3,7 +3,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
-import { Home, Auth } from './pages';
+import { Home, Auth, Login, SignUp } from './pages';
 
 function App(props) {
 	const router = createBrowserRouter([
@@ -12,18 +12,16 @@ function App(props) {
 			element: <Home />,
 		},
 		{
-			path: '/auth',
-			element: <Auth />,
+			path: '/login',
+			element: <Login />,
+		},
+		{
+			path: '/register',
+			element: <SignUp />,
 		},
 	]);
 
-	return (
-		<div className={'auth-wrapper'}>
-			<div className={'auth-inner'}>
-				<RouterProvider router={router} />
-			</div>
-		</div>
-	);
+	return <RouterProvider router={router} />;
 }
 
 export default App;

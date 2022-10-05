@@ -1,14 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
-import './reset.css'
+import React, { Component } from 'react';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
-function App() {
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
-  return (
-    <div className="App">
-      test
-    </div>
-  );
+import { Home, Auth, Login, SignUp } from './pages';
+
+function App(props) {
+	const router = createBrowserRouter([
+		{
+			path: '/',
+			element: <Home />,
+		},
+		{
+			path: '/login',
+			element: <Login />,
+		},
+		{
+			path: '/register',
+			element: <SignUp />,
+		},
+	]);
+
+	return <RouterProvider router={router} />;
 }
 
 export default App;
